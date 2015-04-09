@@ -1,0 +1,29 @@
+{
+  "tenants": [
+    {
+      "name": "TOTVS",
+      "url": "totvs.fluigdata.com"
+    },
+    {
+      "name": "TOTVS Labs",
+      "url": "totvs-labs.fluigdata.com"
+
+    },
+    {
+      "name": "Target",
+      "url": "target.fluigdata.com"
+    },
+    {
+      "name": "Kaiser Permanente",
+      "url": "kaiser-permanente.fluigdata.com"
+    },
+    {
+      "name": "Walmart",
+      "url": "walmart.fluigdata.com"
+    },
+    {
+      "name": "Brunswick",
+      "url": "brunswick.fluigdata.com"
+    }
+  ]
+}

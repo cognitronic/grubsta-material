@@ -1,0 +1,22 @@
+<section id="dashboard">
+    <div layout="row" flex>
+        <md-content class="md-padding" flex>
+            <div >
+                <md-list>
+                    <md-list-item ng-repeat="item in vm.feed track by $index">
+                        <md-card>
+                            <div layout="row">
+                                <div>
+                                    <ng-md-icon icon="{{item.icon}}" size="48"></ng-md-icon>
+                                </div>
+                                <div>
+                                    I dont know
+                                </div>
+                            </div>
+                        </md-card>
+                    </md-list-item>
+                </md-list>
+            </div>
+        </md-content>
+    </div>
+</section>

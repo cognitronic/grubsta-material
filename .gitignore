@@ -1,1 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
+app/spec
+app/vendors
+coverage
+docs
+node_modules
+dist

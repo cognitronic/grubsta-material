@@ -1,0 +1,34 @@
+<md-toolbar class="md-tall md-hue-2">
+    <span flex></span>
+    <div layout="column" class="md-toolbar-tools-bottom inset">
+        <h2>Context Sensitive Help</h2>
+    </div>
+</md-toolbar>
+<md-list>
+    <md-divider></md-divider>
+    <md-subheader>Deployment Center</md-subheader>
+    <md-item ng-repeat="item in rsc.admin track by $index">
+        <a>
+            <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                <div class="inset">
+                    <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+                </div>
+                <div class="inset selectable" ng-click="rsc.closeSideNav('right', item.link)">{{item.title}}
+                </div>
+            </md-item-content>
+        </a>
+    </md-item>
+    <md-divider></md-divider>
+    <md-subheader>360 View</md-subheader>
+    <md-item ng-repeat="item in rsc.menu track by $index">
+        <a>
+            <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                <div class="inset">
+                    <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+                </div>
+                <div class="inset selectable" ng-click="rsc.closeSideNav('right', item.link)">{{item.title}}
+                </div>
+            </md-item-content>
+        </a>
+    </md-item>
+</md-list>

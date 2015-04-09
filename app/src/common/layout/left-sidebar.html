@@ -1,0 +1,55 @@
+<md-toolbar class="md-tall md-hue-2">
+    <span flex></span>
+    <div layout="column" class="md-toolbar-tools-bottom inset">
+        <img src="http://www.ravenartmedia.com/src/assets/images/my_avatar.jpg" class="user-avatar" alt="Profile Pic">
+        <span></span>
+        <div>Danny Schreiber</div>
+    </div>
+</md-toolbar>
+<md-list>
+    <md-divider></md-divider>
+    <md-subheader>Deployment Center</md-subheader>
+    <md-item ng-repeat="item in lsc.admin track by $index">
+        <a>
+            <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                <div class="inset">
+                    <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+                </div>
+                <div class="inset selectable" ng-click="lsc.closeSideNav('left', item.link)">{{item.title}}
+                </div>
+            </md-item-content>
+        </a>
+    </md-item>
+    <md-divider></md-divider>
+    <md-subheader>360 View</md-subheader>
+    <md-item ng-repeat="item in lsc.menu track by $index">
+        <a>
+            <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                <div class="inset">
+                    <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+                </div>
+                <div class="inset selectable" ng-click="lsc.closeSideNav('left', item.link)">{{item.title}}
+                </div>
+            </md-item-content>
+        </a>
+    </md-item>
+    <md-divider></md-divider>
+    <md-item>
+        <div layout="column" layout-align="space-around center">
+            <div class="md-primary">
+                <h3>
+                    Current Tenant ID:
+                </h3>
+            </div>
+            <div>
+                {{ lsc.activeTenant }}
+            </div>
+            <div>
+                <br />
+                <md-button class="md-warn md-raised md-hue-2" ng-click="lsc.clearTenant()">
+                    Clear Active Tenant
+                </md-button>
+            </div>
+        </div>
+    </md-item>
+</md-list>

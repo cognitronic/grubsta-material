@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app="grubsta">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+
+        <!-- build:css css/lib.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="app/vendors/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="app/vendors/angular-material/angular-material.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css css/grubsta.css -->
+
+        <!-- inject:css -->
+
+        <link rel="stylesheet" href="app/src/assets/css/main.css">
+
+        <link rel="stylesheet" href="app/src/assets/css/variables.css">
+
+        <!-- endinject -->
+        <!-- endbuild -->
+    </head>
+    <body layout="row" flex>
+        <div layout="column" class="relative" layout-fill role="main">
+            <div ui-view="header"></div>
+            <div layout="row" flex>
+                <md-content flex class="md-padding">
+                    <toaster-container
+                            toaster-options="{'time-out': 3000, 'close-button': true, 'animation-class': 'toast-top-right'}">
+                    </toaster-container>
+                    <md-sidenav
+                            class=""
+                            md-component-id="left"
+                            layout="column">
+                        <div ui-view="left-sidebar"></div>
+                    </md-sidenav>
+                    <div ui-view="main-content" layout="column" layout-fill layout-align="top center"></div>
+                    <md-sidenav
+                            class="md-sidenav-right md-whiteframe-z2"
+                            md-component-id="right"
+                            layout="column">
+                        <div ui-view="right-sidebar"></div>
+                    </md-sidenav>
+                </md-content>
+            </div>
+        </div>
+
+
+
+    <!-- build:js js/lib.js -->
+
+    <!-- bower:js -->
+    <script src="app/vendors/angular/angular.js"></script>
+    <script src="app/vendors/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="app/vendors/angular-animate/angular-animate.js"></script>
+    <script src="app/vendors/angular-aria/angular-aria.js"></script>
+    <script src="app/vendors/angular-material/angular-material.js"></script>
+    <script src="app/vendors/angular-material-icons/angular-material-icons.min.js"></script>
+    <script src="app/vendors/angular-messages/angular-messages.js"></script>
+    <!-- endbower -->
+
+
+
+    <!-- endbuild -->
+
+    <!-- build:js js/grubsta.js -->
+    <!-- inject:js -->
+
+    <script src="app/src/app.module.js"></script>
+
+    <script src="app/src/common/core.module.js"></script>
+
+    <script src="app/src/dashboard/dashboard.module.js"></script>
+
+    <script src="app/src/common/components/components.module.js"></script>
+
+    <script src="app/src/common/services/services.module.js"></script>
+
+    <script src="app/src/app.js"></script>
+
+    <script src="app/src/common/constants.js"></script>
+
+    <script src="app/src/dashboard/dashboard-controller.js"></script>
+
+    <script src="app/src/common/layout/header-controller.js"></script>
+
+    <script src="app/src/common/layout/left-sidebar-controller.js"></script>
+
+    <script src="app/src/common/layout/right-sidebar-controller.js"></script>
+
+    <script src="app/src/common/layout/top-subnav-controller.js"></script>
+
+    <script src="app/src/common/components/toggle-class/toggle-class.js"></script>
+
+    <!-- endinject -->
+
+    <!-- inject:templates:js -->
+
+    <!-- endinject -->
+
+    <!-- endbuild -->
+    </body>
+</html>
